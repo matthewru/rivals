@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/rivalsapp.iml" filepath="$PROJECT_DIR$/.idea/rivalsapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rivalsapp.iml" filepath="$PROJECT_DIR$/rivalsapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/rivalsapp_android.iml" filepath="$PROJECT_DIR$/android/rivalsapp_android.iml" />
     </modules>
   </component>
 </project>
