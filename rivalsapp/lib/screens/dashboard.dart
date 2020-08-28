@@ -8,6 +8,7 @@ class Dashboard extends StatelessWidget{
 
   Widget build(BuildContext context){
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [Text('Dashboard'), Icon(DASHBOARD)],
     );
   }

@@ -8,6 +8,7 @@ class NewComp extends StatelessWidget{
 
   Widget build(BuildContext context){
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [Text('New Competition'), Icon(ADD_BOX)],
     );
   }
