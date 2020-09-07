@@ -1,7 +1,7 @@
 import 'dart:core';
 
 class Rival {
-  final String id;
+  final int id;
   final String name;
   String photoPath;
   String phoneNumber;

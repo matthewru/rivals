@@ -50,4 +50,15 @@ class RivalEntity {
     }
     return map;
   }
+
+  @override
+  int get hashCode => id.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      other is RivalEntity &&
+      other.id == id &&
+      other.name == name &&
+      other.photoPath == photoPath &&
+      other.phoneNumber == phoneNumber;
 }
