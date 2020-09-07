@@ -7,6 +7,7 @@ import 'package:path_provider/path_provider.dart';
 abstract class DBHelper {
   static final _databaseName = "PRDB.db";
   static final _databaseVersion = 1;
+  static final _databaseFilePathVariableName = 'PRDB';
 
   static Database _database;
   Future<Database> get database async {
@@ -16,10 +17,22 @@ abstract class DBHelper {
   }
 
   _initDatabase() async {
-    Directory documentsDirectory = await getApplicationDocumentsDirectory();
+    //String dbPath = _getDatabaseFilePath();
+    Directory documentsDirectory;
+    documentsDirectory = new Directory('test/resources');
+    //if (dbPath != null) {
+    //  documentsDirectory = new Directory(dbPath);
+    //} else {
+    //  documentsDirectory = await getApplicationDocumentsDirectory();
+    //}
     String path = join(documentsDirectory.path, _databaseName);
     return await openDatabase(path,
         version: _databaseVersion, onCreate: _onCreate);
+  }
+
+  String _getDatabaseFilePath() {
+    Map<String, String> envVars = Platform.environment;
+    return envVars[_databaseFilePathVariableName];
   }
 
   Future _onCreate(Database db, int version) async {
